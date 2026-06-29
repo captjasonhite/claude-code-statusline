@@ -2,7 +2,7 @@
 
 A custom status line for [Claude Code](https://claude.ai/code) that shows context usage, session and weekly token usage, and reset times — all as color-coded background-fill bars.
 
-![Status line showing Context, Session Usage, Weekly Usage, Session Time, and Weekly Time bars]
+![Status line showing Context, Session Usage, Weekly Usage, Session Time, and Weekly Time bars](claude-code-statusline-screenshot.png)
 
 ```
 [Claude Sonnet 4.6] myproject on main    Context:          25%
