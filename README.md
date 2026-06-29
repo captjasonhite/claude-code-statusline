@@ -1,6 +1,6 @@
 # claude-code-statusline
 
-A custom status line for [Claude Code](https://claude.ai/code) that shows context usage, session and weekly token usage, and reset times — all as color-coded background-fill bars.
+A custom status line for [Claude Code](https://claude.ai/code) that shows context usage, session and weekly token usage, and reset times — all as color-coded background-fill bars. It lines things up so you can see where you're at. Why burn tokens when I already did it for you.
 
 ![Status line showing Context, Session Usage, Weekly Usage, Session Time, and Weekly Time bars](claude-code-statusline-screenshot.png)
 
