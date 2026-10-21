@@ -45,3 +45,7 @@ Bars are green below 70%, yellow from 70–89%, red at 90%+.
 - Context bar is always visible; Session and Weekly bars are subscriber-only and appear after the first API call each session.
 - Reset times are shown in your local timezone inside the Session Time and Weekly Time bars.
 - Tested on Linux and macOS.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
