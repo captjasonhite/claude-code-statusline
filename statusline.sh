@@ -42,10 +42,11 @@ def bg_color(pct):
     if pct >= 70: return BG_YELLOW
     return BG_GREEN
 
-def make_bg_bar(pct, text):
+def make_bg_bar(pct, text, force_color=None):
     n     = len(text)
     split = round(pct / 100 * n)
-    filled = f"{bg_color(pct)}{FG_BLACK}{text[:split]}{RESET}"
+    color  = force_color if force_color is not None else bg_color(pct)
+    filled = f"{color}{FG_BLACK}{text[:split]}{RESET}"
     empty  = f"{BG_DARK}{FG_DIM}{text[split:]}{RESET}" if split < n else ''
     return filled + empty
 
@@ -61,7 +62,7 @@ def time_metric_str(label, pct, reset_str, label_width=15):
     if pct is None:
         return None
     lbl = (label + ':').ljust(label_width)
-    return f"{DIM}{lbl}{RESET}{make_bg_bar(pct, reset_str.ljust(BAR_WIDTH))} {pct:3.0f}%"
+    return f"{DIM}{lbl}{RESET}{make_bg_bar(pct, reset_str.ljust(BAR_WIDTH), force_color=BG_GREEN)} {pct:3.0f}%"
 
 def paired_line(left_label, left_pct, right_label, right_pct, label_width=15):
     left  = metric_str(left_label,  left_pct,  label_width)
